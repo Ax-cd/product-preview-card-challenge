@@ -1,0 +1,165 @@
+/* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+/* ### Font
+
+- Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+- Weights: 500, 700
+
+- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+- Weights: 700 */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+/*---------------------------*/
+/* Custom properties         */
+/*---------------------------*/
+:root {								
+	/* Colors */
+	--clr-primary-cyan: 158 36% 37%; /* hsl values */
+	--clr-primary-cream: 30 38% 92%;
+	--clr-neutral-blue: 212 21% 14%;
+    --clr-neutral-gray: 228 12% 48%;
+    --clr-neutral-white: 0 0% 100%;
+	
+	/* Font-sizes */
+	--fs-700: 2rem; /* 32px */
+	--fs-400: 0.875rem; /* 14px */
+
+	/* Font-families */
+	--ff-serif: 'Fraunces', serif;
+	--ff-sans-normal: 'Montserrat', sans-serif;
+}
+
+
+/*---------------------------*/
+/* Reset                     */
+/*---------------------------*/
+
+/* Box sizing */
+*, *::before, *::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+/* Margins */
+body, h1, h2, h3, h4, h5, h6, p, figure, picture {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	font-weight: 400;
+}
+
+/* Body */
+body {
+	font-family: var(--ff-sans-normal);
+	font-size: var(--fs-400);
+    font-weight: 500;
+	color: hsl(var(--clr-neutral-gray));
+	background-color: hsl(var(--clr-primary-cream));
+	line-height: 1.5;
+	min-height: 100vh;
+}
+
+/* Img */
+img:not([hidden]), picture:not([hidden]) {
+	max-width: 100%;
+	display: block;
+}
+
+/* Remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+
+/*---------------------------*/
+/* Utility classes           */
+/*---------------------------*/
+
+/* General */
+.flex {
+	display: flex;
+	gap: var(--gap, 1rem);
+}
+
+.container {
+	padding-inline: 2rem;
+	margin-inline: auto;
+	max-width: 30rem; /* adjust if needed */
+}
+
+.sr-only { /* screen reader */
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip-path: none;
+	white-space: nowrap; /* added line */
+	border: 0;
+}
+
+/* Colors */
+.bg-light {
+	background-color: hsl(var(--clr-neutral-white)); /* To change alpha value => hsl(var(--clr-name) / .5) */
+}
+.bg-accent {
+    background: hsl(var(--clr-primary-cyan));
+}
+.txt-dark {
+    color: hsl(var(--clr-neutral-blue));
+}
+.txt-light {
+    color: hsl(var(--clr-neutral-white));
+}
+.accent {
+    color: hsl(var(--clr-primary-cyan));
+}
+
+/* Typography */
+.ff-serif { font-family: var(--ff-serif); }
+.ff-sans-normal { font-family: var(--ff-sans-normal); }
+
+.fs-700 { font-size: var(--fs-700); }
+.fs-400 { font-size: var(--fs-400); }
+
+.fw-700 { font-weight: 700; }
+
+.letter-spacing { letter-spacing: 6px; }
+
+.uppercase { text-transform: uppercase; }
+.crossed { text-decoration: line-through; }
+
+.fs-700 { line-height: 1.1; }
+
+
+
+
+
+.card {
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.btn-cart {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 1em 5em;
+    cursor: pointer;
+}
