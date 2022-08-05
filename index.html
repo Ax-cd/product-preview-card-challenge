@@ -8,27 +8,30 @@
     <title>Product preview card component | Frontend Mentor</title>
 </head>
 <body>
-    <main>
+    <main class="container flex bg-light card">
         <picture>
             <!-- alt text -->
             <source media="(min-width: 60em)" srcset="/images/image-product-desktop.jpg">
             <source media="(min-width: 10em)" srcset="/images/image-product-mobile.jpg">
-            <img src="/images/image-product-mobile.jpg" alt="">
+            <img src="/images/image-product-mobile.jpg" alt="A squared glass bottle full of golden perfume Gabrielle by Chanel">
         </picture>
         <div>
-            <span>Perfume</span>
+            <span class="uppercase letter-spacing">Perfume</span>
 
-            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <h1 class="ff-serif fs-700 fw-700 txt-dark">Gabrielle Essence Eau De Parfum</h1>
           
             <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
             Perfumer-Creator for the House of CHANEL.</p>
           
             <div>
-                <span>$149.99</span>
-                <span>$169.99</span>
+                <span class="ff-serif fs-700 accent">$149.99</span>
+                <span class="crossed">$169.99</span>
             </div>
             
-            <button>Add to Cart</button>
+            <button class="fw-700 bg-accent txt-light btn-cart">
+                <!-- <img src="/images/icon-cart.svg" alt=""> -->
+                Add to Cart
+            </button>
         </div>
     </main>
     <footer class="attribution">
