@@ -89,10 +89,8 @@ img:not([hidden]), picture:not([hidden]) {
 }
 
 .container {
-	/* padding-inline: 2rem; */
 	margin-inline: auto;
-	max-width: 30rem; /* adjust if needed */
-	/* height: 37.25rem; */
+	max-width: 35rem; /* adjust if needed */
 }
 
 .sr-only { /* screen reader */
@@ -149,13 +147,46 @@ img:not([hidden]), picture:not([hidden]) {
     border-radius: 10px;
 	margin-inline: 1rem;
 }
+@media screen and (min-width: 40em) {
+	.card {
+		flex-direction: row;
+		--gap: 0;
+	}
+	picture {
+		border: 1px solid lawngreen;
+	}
+	.card-img {
+		border: 1px solid aqua;
+		/* object-fit: cover; */
+		/* border-top-right-radius: 0; */
+		/* border-bottom-left-radius: inherit; */
+	}
+	.card-img {
+		object-fit: cover;
+	}
+	.card-text {
+		--gap: 1rem;
+		width: 95%;
+		flex-direction: column;
+		justify-content: space-around;
+		padding-top: 1.6rem;
+		padding-right: 4rem;
+	}
+}
+picture {
+	border: 1px solid red;
+	/* border-radius: 10px; */
+
+}
 .card-img {
-	border-radius: 10px 10px 0 0;
+	border: 1px solid slateblue;
+	/* border-top-left-radius: inherit; */
+	/* border-top-right-radius: 10px; */
+
 }
 .card-text {
 	flex-direction: column;
 	padding-inline: 1.6em;
-	height: inherit;
 }
 .card-prices {
 	display: flex;
