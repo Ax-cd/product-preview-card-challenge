@@ -165,6 +165,7 @@ img:not([hidden]), picture:not([hidden]) {
     border: none;
     border-radius: 8px;
     padding: 1.2em;
+	margin-bottom: 1.6em;
     cursor: pointer;
 	display: flex;
 	align-items: center;
