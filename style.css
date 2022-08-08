@@ -162,9 +162,10 @@ img:not([hidden]), picture:not([hidden]) {
 	flex-direction: column;
 	padding-inline: 1.6em;
 }
-.card-prices {
+.card-prices ul {
 	display: flex;
 	align-items: center;
+	list-style: none;
 }
 .btn-cart {
     border: none;
